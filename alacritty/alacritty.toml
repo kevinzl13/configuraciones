@@ -1,0 +1,34 @@
+import = ["~/AppData/Roaming/alacritty/theme/ayudark.toml"]
+
+
+working_directory = "None"
+live_config_reload = true
+
+
+[shell]
+program = "C:/Users/kevin/AppData/Local/Microsoft/WindowsApps/Microsoft.PowerShell_8wekyb3d8bbwe/pwsh.exe"
+
+
+[window]
+dimensions = { columns = 140, lines = 30 }
+opacity = 1
+
+[font]
+normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+size = 10
+
+[cursor]
+style.shape = "Block"
+style.blinking = "Off"
+
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+osc52 = "CopyPaste"
+
+[keyboard]
+bindings = [
+	{ key = "N", mods = "Control|Shift", action = "CreateNewTab" },
+]

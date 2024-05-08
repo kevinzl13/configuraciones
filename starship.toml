@@ -1,0 +1,168 @@
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$git_metrics\
+$nodejs\
+$c\
+$rust\
+$golang\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$docker_context\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+style = "fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[username]
+show_always = true
+style_user = "fg:color_fg0"
+style_root = "fg:color_fg0"
+format = '[ $user]($style)'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue)  [$hostname](bold red) '
+trim_at = '.companyname.com'
+disabled = false
+
+[directory]
+style = "fg:#06D6A0"
+format = "[ $path ]($style)"
+truncation_length = 4 
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch(:$remote_branch)]($style) "
+#style = "bright-black"
+style = "fg:#F2A359"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "#f8d5af"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[git_commit]
+commit_hash_length = 8
+tag_symbol = " 󱍵 "
+tag_disabled = false
+style = "bold #F5F5F5"
+format = '[[ $hash (:$tag )](fg:#F1EDEE bg:#263540 )]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_green"
+format = '[[ $symbol( $version) ](fg:#F5F5F5 bg:#00665F)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version $mod_version) ](fg:#F5F5F5 bg:#CC8F00)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:#dfd09a bg:#10273c)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[java]
+symbol = " "
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#FFD166"
+format = '[[ $symbol( $version $virtualenv) ](fg:#F5F5F5 bg:#023C2B)]($style)'
+
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg:#F5F5F5 bg:#102E4A)]($style)'
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:#529438)'
+error_symbol = '[](bold fg:#9C4457)'
+vimcmd_symbol = '[](bold fg:#529438)'
+vimcmd_replace_one_symbol = '[](bold fg:#500B5B)'
+vimcmd_replace_symbol = '[](bold fg:#500B5B)'
+vimcmd_visual_symbol = '[](bold fg:#F5F500)'

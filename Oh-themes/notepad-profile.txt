@@ -1,0 +1,5 @@
+(@(& 'C:/Users/usuario/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\usuario\AppData\Local\Programs\oh-my-posh\themes\groos.omp.json' --print) -join "`n") | Invoke-Expression
+
+Import-Module terminal-Icons
+
+Set-PSReadLineOption -PredictionViewStyle ListView
